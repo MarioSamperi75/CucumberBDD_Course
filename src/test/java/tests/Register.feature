@@ -5,8 +5,10 @@
 
 Feature: User Registration
 
-Scenario: Register with mandatory fields
+Background:
 Given User navigates to Register Account page
+
+Scenario: Register with mandatory fields
 When User enters firstname "Mario" into the Firstname field
 And Enters lastname "Samperi" into the Lastname field
 And Enters email address "samperimario75@gmail.com" into the EmailAddress field
@@ -19,7 +21,6 @@ Then Account should get successfully created
 
 
 Scenario: Register with all fields
-Given User navigates to Register Account page
 When User enters firstname "Mario" into the Firstname field
 And Enters lastname "Samperi" into the Lastname field
 And Enters email address "samperimario75@gmail.com" into the EmailAddress field
@@ -33,14 +34,12 @@ Then Account should get successfully created
 
 
 Scenario: Register without providing any fields
-Given User navigates to Register Account page
 When User do not enter details into any fields
 And Clicks on Continue button
 Then Warning message should displayed for the mandatory fields
 
 
 Scenario: register with duplicate email address
-Given User navigates to Register Account page
 When User enters firstname "Mario" into the Firstname field
 And Enters lastname "Samperi" into the Lastname field
 And Enters email address "existingEmail@gmail.com" into the EmailAddress field
