@@ -8,11 +8,16 @@ Register User should be able to login to access account details
 Background:
 Given User navigates to Login page
 
-Scenario: Login with valid credentials
-When User enters valid email address "samperimario75@gmail.com"
-And Enters valid password "*******"
+Scenario Outline: Login with valid credentials
+When User enters valid email address <email>
+And Enters valid password <password>
 And Clicks on Login button
 Then User should login successfully
+Examples:
+|email 										|password	|
+|samperimario75@gmail.com	|123456		|
+|mariosss@libero.it				|234567		|
+|marios.samperi@vina.se		|345678		|
 
 Scenario: Login with invalid credentials
 When User enters invalid email address "samperimario75dsafsads@gmail.com"

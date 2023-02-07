@@ -8,14 +8,15 @@ public class Login {
 	public void user_navigates_to_login_page() {
 	    System.out.println(">> User got navigated to Login Page");
 	}
-
-	@When("User enters valid email address {string}")
-	public void user_enters_valid_email_address(String emailAddress) {
-		System.out.println(">> User entered valid email address: " + emailAddress);
+	
+	@When("User enters valid email address (.+)$")
+	public void user_enters_valid_email_address_email(String email) {
+		System.out.println(">> User entered valid email address: " + email);
 	}
 
-	@When("Enters valid password {string}")
-	public void enters_valid_password(String password) {
+	@And("^Enters valid password (.+)$")
+	public void enters_valid_password_password(String password) {
+	    // Write code here that turns the phrase above into concrete actions
 		System.out.println(">> User entered valid password: " + password);
 	}
 
