@@ -14,5 +14,16 @@ public class __Hooks {
 		System.out.println("Browser got closed");
 	
 	}
+	
+	@Before(("@login"))
+	public void onlyForBeforeLogin() {
+		System.out.println("onlyForBeforeLogin");
+	}
+	
+	@After(("@login"))
+	public void onlyForAfterLogin() {
+		System.out.println("onlyForAfterLogin");
+	
+	}
 
 }
