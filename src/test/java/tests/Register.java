@@ -49,11 +49,6 @@ public class Register {
 		System.out.println(">> User has selected the Privacy Policy field");
 	}
 	
-	@When("Clicks on Continue button")
-	public void clicks_on_continue_button() {
-		System.out.println(">> User has clicked the Continue button");
-	}
-	
 	@Then("Account should get successfully created")
 	public void account_should_get_successfully_created() {
 		System.out.println(">> The account got successfully created");
