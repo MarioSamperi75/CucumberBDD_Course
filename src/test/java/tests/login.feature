@@ -20,20 +20,20 @@ Examples:
 |marios.samperi@vina.se		|345678		|
 
 Scenario: Login with invalid credentials
-When User enters invalid email address "samperimario75dsafsads@gmail.com"
-And Enters invalid password "dafsdfadsf"
+When User enters invalid email address "samperimario75dsafsadsgmail.com"
+And Enters invalid password "dfasdfdsa"
 And Clicks on Login button
 Then User should get a proper warning message
 
 Scenario: Login with valid email address and invalid password
-When User enters invalid email address "samperimario75@gmail.com"
-And Enters invalid password "dafsdfadsf"
+When User enters invalid email address "samperimario75gmail.com"
+And Enters invalid password ""
 And Clicks on Login button
 Then User should get a proper warning message
 
 Scenario: Login with invalid email address and valid password
-When User enters invalid email address "samperimario75fdadsf@gmail.com"
-And Enters invalid password "********"
+When User enters invalid email address "samperimario75fdadsfgmail.com"
+And Enters invalid password ""
 And Clicks on Login button
 Then User should get a proper warning message
 

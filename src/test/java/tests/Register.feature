@@ -12,9 +12,9 @@ Scenario: Register with mandatory fields
 When User enters firstname "Mario" into the Firstname field
 And Enters lastname "Samperi" into the Lastname field
 And Enters email address "samperimario75@gmail.com" into the EmailAddress field
-And Enters telephone "1234567890" into the Telephone field
-And Enters password "123456" into the Password field
-And Enters password "123456" into the Password Confirm field
+And Enters telephone 1234567890 into the Telephone field
+And Enters password 123456 into the Password field
+And Enters password 123456 into the Password Confirm field
 And Selects Privacy Policy field
 And Clicks on Continue button
 Then Account should get successfully created
@@ -24,9 +24,9 @@ Scenario: Register with all fields
 When User enters firstname "Mario" into the Firstname field
 And Enters lastname "Samperi" into the Lastname field
 And Enters email address "samperimario75@gmail.com" into the EmailAddress field
-And Enters telephone "1234567890" into the Telephone field
-And Enters password "123456" into the Password field
-And Enters password "123456" into the Password Confirm field	
+And Enters telephone 1234567890 into the Telephone field
+And Enters password 123456 into the Password field
+And Enters password 123456 into the Password Confirm field	
 And Selects Privacy Policy field
 And Clicks on Continue button
 And Select Yes for Newsletter
@@ -43,9 +43,9 @@ Scenario: register with duplicate email address
 When User enters firstname "Mario" into the Firstname field
 And Enters lastname "Samperi" into the Lastname field
 And Enters email address "existingEmail@gmail.com" into the EmailAddress field
-And Enters telephone "1234567890" into the Telephone field
-And Enters password "123456" into the Password field
-And Enters password "123456" into the Password Confirm field	
+And Enters telephone 1234567890 into the Telephone field
+And Enters password 123456 into the Password field
+And Enters password 123456 into the Password Confirm field	
 And Selects Privacy Policy field
 And Clicks on Continue button
 And Select Yes for Newsletter

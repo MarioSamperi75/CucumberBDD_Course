@@ -35,7 +35,7 @@ public class RegexDemo {
 		// ^ facoltativo, in una stringa, ne indica l'inizio
 		// ^ facoltativo, in una stringa, ne indica la fine
 		pattern = ".*mario.*";
-		text = "samperimario75@gmail.com";
+		text = "samperimario75@gmail.com ";
 		checkAndShow(pattern, text);
 
 		pattern = "mario.+samperi";
@@ -199,8 +199,14 @@ public class RegexDemo {
 		text = "a";
 		checkAndShow(pattern, text);
 
-		pattern = "[a-z&&[^xyz]]";
-		text = "a";
+		pattern = "\"[^@]*\"";
+		text = "\"samperimario75dsafsads.gmailcom\"";
 		checkAndShow(pattern, text);
+		
+		
+		
+		
 	}
+	
+	
 }
