@@ -3,6 +3,11 @@
 #So that I can check my account details
 
 
+# use @dev or @ignore or @wip tag to mark tests ypu wont skip to run tests
+# names are conventrions
+# (if a test is in progress, but not ready e.g.)
+# then add a filter to the runner (see file)
+
 #the commons tag on the top of feature
 @all
 Feature: User Login

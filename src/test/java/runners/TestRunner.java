@@ -17,8 +17,9 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = "src/test/resources/features",
 		glue = "stepdefinitions",
-		tags = "@smoke",
-		plugin = {"pretty","html:target/CucumberHTMLReport.html"}/*, tags="@login"*/
+		tags = "@all and not @dev and not @ignore and not @wip",
+		plugin = {"pretty","html:target/CucumberHTMLReport.html"}	
+		
 		)
 public class TestRunner {
 
