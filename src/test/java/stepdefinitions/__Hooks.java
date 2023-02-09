@@ -4,6 +4,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeStep;
+import io.cucumber.java.Scenario;
 
 public class __Hooks {
 	
@@ -11,14 +12,16 @@ public class __Hooks {
 	
 	//The tag needs attribute "value" in case of multiple attributes
 	//e.g. 	@Before(order=1, value="@search")
-	@Before("@search")
-	public void setup() {
+	@Before
+	public void setup(Scenario scenario) {
+		System.out.println("** Execution started for scenario - " + scenario.getName()  );
 		System.out.println("++ before hook - Setup method got executed ++");
 	}
 
-	@After("@search")
-	public void tearDown() {
+	@After
+	public void tearDown(Scenario scenario) {
 		System.out.println("-- before hook - TearDown method got executed --");
+		System.out.println("** Execution ended for scenario - " + scenario.getName()  );
 
 	}
 
