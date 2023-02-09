@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 // you can specify a single feature to run
 // e.g. features = "src/test/java/features/Search.feature",
 @CucumberOptions(
-		features = "src/test/java/features",
+		features = "src/test/resources/features",
 		glue = "stepdefinitions",
 		plugin = {"pretty","html:target/CucumberHTMLReport.html"}/*, tags="@login"*/
 		)
