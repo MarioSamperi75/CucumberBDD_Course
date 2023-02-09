@@ -10,24 +10,24 @@ Given User navigates to Register Account page
 
 @register @mandatoryfields @smoke @regression
 Scenario: Register with mandatory fields
-When User enters firstname "Mario" into the Firstname field
-And Enters lastname "Samperi" into the Lastname field
-And Enters email address "samperimario75@gmail.com" into the EmailAddress field
-And Enters telephone 1234567890 into the Telephone field
-And Enters password 123456 into the Password field
-And Enters password 123456 into the Password Confirm field
+When User enters below details into the fields
+|firstname		|Mario|
+|lastname			|Samperi|
+|emailaddress	|samperimario75@gmail.com|
+|telephone		|1234567890|
+|password			|123456|
 And Selects Privacy Policy field
 And Clicks on Continue button
 Then Account should get successfully created
 
 @register @allfields @smoke @regression
 Scenario: Register with all fields
-When User enters firstname "Mario" into the Firstname field
-And Enters lastname "Samperi" into the Lastname field
-And Enters email address "samperimario75@gmail.com" into the EmailAddress field
-And Enters telephone 1234567890 into the Telephone field
-And Enters password 123456 into the Password field
-And Enters password 123456 into the Password Confirm field	
+When User enters below details into the fields
+|firstname		|Mario|
+|lastname			|Samperi|
+|emailaddress	|samperimario75@gmail.com|
+|telephone		|1234567890|
+|password			|123456|
 And Selects Privacy Policy field
 And Clicks on Continue button
 And Select Yes for Newsletter
@@ -41,12 +41,12 @@ Then Warning message should displayed for the mandatory fields
 
 @register @duplicatemail @regression
 Scenario: register with duplicate email address
-When User enters firstname "Mario" into the Firstname field
-And Enters lastname "Samperi" into the Lastname field
-And Enters email address "existingEmail@gmail.com" into the EmailAddress field
-And Enters telephone 1234567890 into the Telephone field
-And Enters password 123456 into the Password field
-And Enters password 123456 into the Password Confirm field	
+When User enters below details into the fields
+|firstname		|Mario|
+|lastname			|Samperi|
+|emailaddress	|samperimario75@gmail.com|
+|telephone		|1234567890|
+|password			|123456|
 And Selects Privacy Policy field
 And Clicks on Continue button
 And Select Yes for Newsletter

@@ -1,5 +1,8 @@
 package tests;
 
+import java.util.Map;
+
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 
 public class Register {
@@ -12,37 +15,50 @@ public class Register {
 		System.out.println(">> User got navigated to Register Account Page");
 	}
 	
+	@When("User enters below details into the fields")
+	public void User_enters_below_details_into_the_fields(DataTable dataTable) {
+		
+		Map<String, String> map = dataTable.asMap(String.class, String.class);
 	
+		System.out.println(">> User has entered the firstname as " + map.get("firstname"));
+		System.out.println(">> User has entered the lastname as " + map.get("lastname"));
+		System.out.println(">> User has entered the email as " + map.get("emailaddress"));
+		System.out.println(">> User has entered the telephone as " + map.get("telephone"));
+		System.out.println(">> User has entered the password as " + map.get("password"));
+	}
+
 	// {string} {word} or {}(anything)
-	@When("User enters firstname {string} into the Firstname field")
-	public void user_enters_firstname_into_the_firstname_field(String firstname) {
-		System.out.println(">> User entered firstname: " + firstname + " into the Firstname field");
-	}
-	
-	@And("Enters lastname {string} into the Lastname field")
-	public void enters_lastname_into_the_lastname_field(String lastname) {
-		System.out.println(">> User entered lastname: " + lastname + " into the Lastname field");
-	}
-	
-	@When("Enters email address {string} into the EmailAddress field")
-	public void enters_email_address_into_the_email_address_field(String emailAddress) {
-		System.out.println(">> User enters email address: " + emailAddress + " into the Email Address field");
-	}
-	
-	@When("Enters telephone {int} into the Telephone field")
-	public void enters_telephone_into_the_telephone_field(int telephone) {
-		System.out.println(">> User enters telephone: " + telephone + " into the Telephone field");
-	}
-	
-	@When("Enters password {int} into the Password field")
-	public void enters_password_into_the_password_field(int password) {
-		System.out.println(">> User enters password: " + password + " into the Password field");
-	}
-	 
-	@When("Enters password {int} into the Password Confirm field")
-	public void enters_password_into_the_password_confirm_field(int password) {
-		System.out.println(">> User enters password: " + password + " into the Password Confirm field");
-	}
+	/*
+	 * @When("User enters firstname {string} into the Firstname field") public void
+	 * user_enters_firstname_into_the_firstname_field(String firstname) {
+	 * System.out.println(">> User entered firstname: " + firstname +
+	 * " into the Firstname field"); }
+	 * 
+	 * @And("Enters lastname {string} into the Lastname field") public void
+	 * enters_lastname_into_the_lastname_field(String lastname) {
+	 * System.out.println(">> User entered lastname: " + lastname +
+	 * " into the Lastname field"); }
+	 * 
+	 * @When("Enters email address {string} into the EmailAddress field") public
+	 * void enters_email_address_into_the_email_address_field(String emailAddress) {
+	 * System.out.println(">> User enters email address: " + emailAddress +
+	 * " into the Email Address field"); }
+	 * 
+	 * @When("Enters telephone {int} into the Telephone field") public void
+	 * enters_telephone_into_the_telephone_field(int telephone) {
+	 * System.out.println(">> User enters telephone: " + telephone +
+	 * " into the Telephone field"); }
+	 * 
+	 * @When("Enters password {int} into the Password field") public void
+	 * enters_password_into_the_password_field(int password) {
+	 * System.out.println(">> User enters password: " + password +
+	 * " into the Password field"); }
+	 * 
+	 * @When("Enters password {int} into the Password Confirm field") public void
+	 * enters_password_into_the_password_confirm_field(int password) {
+	 * System.out.println(">> User enters password: " + password +
+	 * " into the Password Confirm field"); }
+	 */
 	
 	@When("Selects Privacy Policy field")
 	public void selects_privacy_policy_field() {
