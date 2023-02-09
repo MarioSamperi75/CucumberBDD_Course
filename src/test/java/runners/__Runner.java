@@ -6,6 +6,8 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
+// you can specify a single feature to run
+// e.g. features = "src/test/java/features/Search.feature",
 @CucumberOptions(
 		features = "src/test/java/features",
 		glue = "stepdefinitions",
