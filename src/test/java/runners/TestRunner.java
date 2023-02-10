@@ -13,14 +13,15 @@ import io.cucumber.junit.CucumberOptions;
 // e.g. from source directory
 // mvn test -Dcucumber.filter.tags="@search"
 
-
 @CucumberOptions(
-		features = "src/test/resources/features",
-		glue = "stepdefinitions",
-		tags = "@all and not @dev and not @ignore and not @wip",
-		plugin = {"pretty","html:target/CucumberHTMLReport.html"}	
-		
-		)
+		features = "src/test/resources/features", 
+		glue = { "stepdefinitions",	"hooks" }, 
+		tags = "@all", 
+		plugin = { 	"pretty", 
+					"json:target/cucumber-report/cucumber.json",
+					"html:target/cucumber-report/cucumber.html",
+					"junit:target/cucumber-report/cucumber.xml"
+					})
 public class TestRunner {
 
 }
